@@ -11,7 +11,4 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 18.16
-      - run: yarn install
-      - run: yarn test
-      - run: yarn db:schema
       - run: yarn prisma db seed
