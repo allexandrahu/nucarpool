@@ -2,6 +2,8 @@
 
 This is a web app for Northeastern University's students to assists them in finding groups for carpooling while on co-op.
 
+Trigger
+
 ## Get Started
 
 - Clone the project, add environment variables (listed below) in `.env`.
