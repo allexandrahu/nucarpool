@@ -4,6 +4,16 @@ This is a web app for Northeastern University's students to assists them in find
 
 Trigger
 
+# https://vercel.com/docs/storage/vercel-postgres
+POSTGRES_URL=
+
+NEXTAUTH_URL=http://localhost:3000
+AUTH_SECRET= # https://generate-secret.vercel.app/32
+
+# https://authjs.dev/getting-started/providers/github
+AUTH_GITHUB_ID=
+AUTH_GITHUB_SECRET=
+
 ## Get Started
 
 - Clone the project, add environment variables (listed below) in `.env`.
