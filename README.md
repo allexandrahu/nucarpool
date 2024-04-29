@@ -3,31 +3,20 @@
 This is a web app for Northeastern University's students to assists them in finding groups for carpooling while on co-op.
 
 Trigger
-```
-# https://vercel.com/docs/storage/vercel-postgres
-POSTGRES_URL=
-
-NEXTAUTH_URL=http://localhost:3000
-AUTH_SECRET= # https://generate-secret.vercel.app/32
-
-# https://authjs.dev/getting-started/providers/github
-AUTH_GITHUB_ID=
-AUTH_GITHUB_SECRET=
-
-## Get Started
+ 
 
 - Clone the project, add environment variables (listed below) in `.env`.
-```
+ 
 ```env
 # Prisma
 
 
-# DATABASE_URL =
+DATABASE_URL=mysql://nucarpool_phrasetone:d170052e6469bb138be56820917e15f3546dc06d@kxx.h.filess.io:3307/nucarpool_phrasetone
 
 # Next Auth
 
-NEXTAUTH_SECRET=
-NEXTAUTH_URL=
+NEXTAUTH_SECRET==http://localhost:3000
+NEXTAUTH_URL=# https://generate-secret.vercel.app/32
 
 # Mapbox
 
