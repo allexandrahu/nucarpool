@@ -12,4 +12,4 @@ jobs:
         with:
           node-version: 18.16
       - run: yarn install
-      - run: yarn build:preview
+      - run: yarn seed
