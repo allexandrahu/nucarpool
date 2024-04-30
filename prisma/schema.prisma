@@ -80,6 +80,8 @@ model Request {
 // Represents a group of users
 model CarpoolGroup {
   id    String @id @default(cuid()) // primary key
+   //eastsde to uw
+   // downtown to msft
   message String
   users User[]
 
