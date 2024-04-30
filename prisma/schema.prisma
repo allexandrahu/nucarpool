@@ -96,8 +96,14 @@ model User {
   bio                String         @default("")
   preferredName      String         @default("")
   pronouns           String         @default("")
-  accounts           Account[] // can have multiple accounts
-  sessions           Session[] // can have multiple settings
+  accounts           Account[]     // can have multiple accounts
+  sessions           Session[]     // can have multiple settings
+  carpools           Carpool[]     // can have multiple carpool, only one is supposed to be active
+}
+
+// m:m -like bus route
+model  Carpool {  
+  carpoolId          String         @id @default(cuid()) // primary key
   role               Role           @default(RIDER)
   status             Status         @default(ACTIVE)
   seatAvail          Int            @default(0) @map("seat_avail")
@@ -124,11 +130,10 @@ model User {
   sentRequests       Request[]      @relation("sentRequests")
   receivedRequests   Request[]      @relation("receivedRequests")
   carpool            CarpoolGroup?   @relation(fields: [carpoolId], references: [id])
-  carpoolId          String?
-
   @@map(name: "user")
   @@index([carpoolId])
 }
+
 
 // Represents a VerificationToken--need this for NextAuth.
 model VerificationToken {
