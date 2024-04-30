@@ -96,6 +96,10 @@ model User {
   bio                String         @default("")
   preferredName      String         @default("")
   pronouns           String         @default("")
+  favoritedBy        User[]         @relation("Favorites")
+  favorites          User[]         @relation("Favorites")
+  sentRequests       Request[]      @relation("sentRequests")
+  receivedRequests   Request[]      @relation("receivedRequests")
   accounts           Account[]     // can have multiple accounts
   sessions           Session[]     // can have multiple settings
   carpools           Carpool[]     // can have multiple carpool, only one is supposed to be active
@@ -125,10 +129,6 @@ model  Carpool {
   daysWorking        String         @default("") @map("days_working")
   startTime          DateTime?      @map("start_time") @db.Time(0)
   endTime            DateTime?      @map("end_time") @db.Time(0)
-  favoritedBy        User[]         @relation("Favorites")
-  favorites          User[]         @relation("Favorites")
-  sentRequests       Request[]      @relation("sentRequests")
-  receivedRequests   Request[]      @relation("receivedRequests")
   carpool            CarpoolGroup?   @relation(fields: [carpoolId], references: [id])
   @@map(name: "user")
   @@index([carpoolId])
