@@ -1,4 +1,4 @@
-name: Tests
+name: DB
 
 on: [push]
 
@@ -12,4 +12,5 @@ jobs:
         with:
           node-version: 18.16
       - run: yarn install
+      - run: yarn db:schema
       - run: yarn seed
