@@ -15,6 +15,10 @@ show databases;
 
 mysql> create database nucarpool;
 
+CREATE USER 'app' IDENTIFIED BY 'pwd12918';
+
+GRANT ALL PRIVILEGES ON nucarpool.* TO 'app';
+
 
 aws rds describe-db-instances --db-instance-identifier YOUR_DB_INSTANCE_IDENTIFIER
 
