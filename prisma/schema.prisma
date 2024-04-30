@@ -78,7 +78,7 @@ model Request {
 }
 
 // Represents a group of users
-// is carpool dedicated to on company?
+// is carpool dedicated to one company?
 model CarpoolGroup {
   id    String @id @default(cuid()) // primary key
    //eastsde to uw
