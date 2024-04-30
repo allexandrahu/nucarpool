@@ -109,6 +109,7 @@ model User {
 }
 
 // m:m -like bus route
+// Q - does it cover both ways?
 model  Carpool {  
   carpoolId          String         @id @default(cuid()) // primary key
   role               Role           @default(RIDER)
