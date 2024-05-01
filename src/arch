@@ -1,0 +1,9 @@
+
+from code:
+
+
+
+export const appRouter = router({
+  user: userRouter,
+  mapbox: mapboxRouter,
+});
