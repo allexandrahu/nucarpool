@@ -2,4 +2,12 @@
 https://www.carpoolnu.com/api/trpc/mapbox.getDirections?batch=1
 
 
+
+// return data by groups
+/// sample below - you see they are mapped to UI
+/// geoJsonUserList 
+// user
+// user.recommendations
+/// user.favorites
+/// user.requests
 https://www.carpoolnu.com/api/trpc/mapbox.geoJsonUserList,user.me,user.recommendations.me,user.favorites.me,user.requests.me?batch=1
