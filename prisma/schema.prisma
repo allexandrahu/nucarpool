@@ -118,14 +118,8 @@ model  Carpool {
   seatAvail          Int            @default(0) @map("seat_avail")
   companyName        String         @default("") @map("company_name")
   companyAddress     String         @default("") @map("company_address")
-  companyCoordLng    Float          @default(0) @map("company_coord_lng")
-  companyCoordLat    Float          @default(0) @map("company_coord_lat")
-  startAddress       String         @default("") @map("start_address")
-  startCoordLng      Float          @default(0) @map("start_coord_lng")
-  startCoordLat      Float          @default(0) @map("start_coord_lat")
+  startAddress       String         @default("") @map("start_address") // remove long/lat bc of addressId
   companyPOIAddress  String         @default("") @map("company_poi_address")
-  companyPOICoordLng Float          @default(0) @map("company_poi_coord_lng")
-  companyPOICoordLat Float          @default(0) @map("company_poi_coord_lat")
   startPOILocation   String         @default("") @map("start_poi_location")
   startPOICoordLng   Float          @default(0) @map("start_poi_coord_lng")
   startPOICoordLat   Float          @default(0) @map("start_poi_coord_lat")
@@ -141,7 +135,14 @@ model  Carpool {
 
 
 // address - user or dest company
-
+model Address
+{
+AddressId int // primary key
+Address String
+CoordLng Float @default(0) @map("coord_lng")
+CoordLat Float @default(0) @map("coord_lat")
+POIAddress String @default("") @map("poi_address")
+}
 
 // Represents a VerificationToken--need this for NextAuth.
 model VerificationToken {
