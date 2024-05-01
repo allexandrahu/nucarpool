@@ -112,6 +112,7 @@ model User {
 // Q - does it cover both ways?
 model  Carpool {  
   carpoolId          String         @id @default(cuid()) // primary key
+  userId             String         @id @default(cuid()) // primary key
   role               Role           @default(RIDER)
   status             Status         @default(ACTIVE)
   seatAvail          Int            @default(0) @map("seat_avail")
