@@ -22,7 +22,7 @@ https://github.com/allexandrahu/nucarpool/blob/main/vercel.sh
 - db: cloud
 - auth: next auth api
 - map: mapbox api
-- run: cloud serverless 
+- run: cloud serverless: AWS / Azunre / GCP all provide  serverless runtime
 
 - normalize address: company prefined list?
 - remove POI address from model
