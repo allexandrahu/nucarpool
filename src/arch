@@ -18,8 +18,8 @@ https://github.com/allexandrahu/nucarpool/blob/main/src/server/router/user.ts
 serverless deploy hook
 https://github.com/allexandrahu/nucarpool/blob/main/vercel.sh
 
- serverless
-- db: 
+ serverless: no instance or server to maintain 
+- db: cloud
 - auth: next auth api
 - map: mapbox api
 - run: cloud serverless 
