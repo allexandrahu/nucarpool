@@ -16,5 +16,15 @@ user api
 https://github.com/allexandrahu/nucarpool/blob/main/src/server/router/user.ts
 
 serverless deploy hook
-
 https://github.com/allexandrahu/nucarpool/blob/main/vercel.sh
+
+ serverless
+- db: 
+- auth: next auth api
+- map: mapbox api
+- run: cloud serverless 
+
+- normalize address: company prefined list?
+- remove POI address from model
+- report: add logic to track usage, event like pick up, drop
+- 
